@@ -1,127 +1,141 @@
-# 📊 Customer-Product Analysis Dashboard
+# 📊 Business Intelligence Sales Dashboard
 
 ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
-![Dashboard](https://img.shields.io/badge/Dashboard-Interactive-blue?style=for-the-badge&logo=databricks&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)
-![Data](https://img.shields.io/badge/Records-2000_Orders-orange?style=for-the-badge&logo=databricks&logoColor=white)
+![Dashboard](https://img.shields.io/badge/Dashboard-BI%20Analytics-blue?style=for-the-badge&logo=databricks&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+
+> An interactive Excel-based Business Intelligence dashboard providing end-to-end visibility into sales performance, customer profitability, regional distribution, and category-level insights.
+
+---
+
+## 📸 Dashboard Preview
+
+![Business Intelligence Sales Dashboard](./Dashboard.png)
 
 ---
 
 ## 📌 Overview
 
-The **Customer Transaction Analysis Dashboard** is an interactive Excel-based business intelligence tool that provides a comprehensive view of sales performance, customer behaviour, and profitability trends. Designed for quick decision-making, it consolidates key metrics into one visually intuitive interface with dynamic filters.
+This project is a fully interactive **Business Intelligence Sales Dashboard** built in Microsoft Excel. It consolidates 2,000 sales transactions into a single, clean view — enabling data-driven decision-making across segments, regions, and product categories.
 
 ---
 
-## ✨ Key Features
-
-- 🔢 **KPI Summary Cards** — Instant visibility into Total Revenue, Total Orders, Average Order Value, Unique Customers, and Units Sold
-- 🔍 **Interactive Slicers** — Filter data by Month, Segment, Category, and Region simultaneously
-- 📈 **Monthly Profit Trend** — Line chart tracking profitability across all 12 months
-- 🥧 **Sales by Category** — Pie chart breakdown across Furniture, Office Supplies, and Technology
-- 🏆 **Top 10 Customers** — Horizontal bar chart ranking highest-value customers
-- 🕸️ **Profit by Region** — Radar chart comparing East, West, North, and South regions
-- 📊 **Average Sales by Sub-Categories** — Bar chart covering 11 sub-categories (Accessories, Binders, Bookcases, Chairs, Envelopes, Labels, Laptops, Paper, Phones, Storage, Tables)
-- 🍩 **Profit by Segment** — Donut chart comparing Consumer, Corporate, and Home Office segments
-
----
-
-## 📐 Dashboard Metrics at a Glance
+## 🔢 Key Metrics at a Glance
 
 | Metric | Value |
 |---|---|
 | 💰 Total Revenue | $6,11,859.40 |
-| 🛒 Total Orders | 2,000 |
-| 📦 Avg Order Value | $2,102.84 |
+| 📦 Total Orders | 2,000 |
+| 🏷️ Avg Order Value | $2,102.84 |
 | 👥 Unique Customers | 240 |
-| 📫 Units Sold | 20,747 |
+| 📊 Units Sold | 20,747 |
 
 ---
 
-## 🗂️ Data Segments
+## 📊 Dashboard Components
 
-| Dimension | Values |
+### 1. 🥧 Sales by Categories
+A pie chart breaking down revenue contribution across three major categories:
+- **Furniture** — 34%
+- **Office Supplies** — 32%
+- **Technology** — 34%
+
+### 2. 📈 Monthly Sales Trend
+A line chart displaying month-over-month sales performance across the full year (Jan–Dec), highlighting seasonal peaks and troughs.
+
+### 3. 🏆 Top 10 Profitable Customers
+A ranked horizontal bar chart showcasing the highest-value customers by profit contribution, topped by **Rahul Patel** ($7,175.47) and **Kavya Verma** ($7,128.46).
+
+### 4. 🕸️ Unit Sold by Region
+A radar/spider chart comparing unit sales volume across four regions:
+- East · West · North · South
+
+### 5. 📊 Avg Profit vs Sales by Sub-Category
+A grouped bar chart comparing average sales and average profit for each sub-category (Accessories, Binders, Bookcases, Chairs, Envelopes, Labels, Laptops, Paper, Phones, Storage, Tables).
+
+### 6. 🍩 Profit by Segment
+A donut chart visualizing profit distribution across customer segments:
+- **Consumer** · **Corporate** · **Home Office**
+
+---
+
+## 🎛️ Interactive Filters (Slicers)
+
+The dashboard supports dynamic filtering using Excel slicers:
+
+| Filter | Options |
 |---|---|
-| **Segment** | Consumer, Corporate, Home Office |
-| **Category** | Furniture, Office Supplies, Technology |
-| **Region** | East, West, North, South |
-| **Period** | Monthly (Jan – Dec 2025) |
+| 📅 Order Date | Timeline slicer (by Month) |
+| 👤 Segment | Consumer · Corporate · Home Office |
+| 🗂️ Category | Furniture · Office Supplies · Technology |
+| 🌍 Region | East · North · South · West |
 
----
-
-## 🏆 Top 10 Customers
-
-| Rank | Customer | Revenue |
-|---|---|---|
-| 1 | Rahul Patel | $7,175.47 |
-| 2 | Kavya Verma | $7,128.46 |
-| 3 | Rahul Kapoor | $6,889.80 |
-| 4 | Pooja Verma | $6,337.24 |
-| 5 | Ishita Nair | $6,188.56 |
-| 6 | Aditya Shah | $5,817.83 |
-| 7 | Pooja Nair | $5,805.14 |
-| 8 | Aditya Kapoor | $5,724.06 |
-| 9 | Rahul Shah | $5,341.76 |
-| 10 | Aarav Desai | $5,161.76 |
+All charts update in real-time when filters are applied.
 
 ---
 
 ## 📁 File Structure
 
 ```
-📦 CustomerTransactionDashboard
- ┣ 📊 RenseeGajipara_Excel_Dashboard.xlsx   ← Main dashboard file
- ┣ 🖼️  Dashboard.png                         ← Dashboard preview image
- ┗ 📄 README.md                              ← Project documentation
+📦 BI-Sales-Dashboard
+ ┣ 📊 RenseeGajipara_Excel_Dashboard.xlsx   # Main Excel workbook
+ ┃  ┣ 📋 Dashboard                          # Interactive dashboard sheet
+ ┃  ┗ 🗄️  Raw Data                          # Source transaction data (2,000 rows)
+ ┗ 🖼️  Dashboard.png                        # Dashboard screenshot preview
 ```
+
+---
+
+## 🗄️ Dataset Details
+
+| Field | Description |
+|---|---|
+| `Order_ID` | Unique order identifier (e.g., ORD-1001) |
+| `Order_Date` | Date the order was placed |
+| `Ship_Date` | Date the order was shipped |
+| `Region` | Sales region (North / South / East / West) |
+| `Category` | Product category |
+| `Sub_Category` | Product sub-category |
+| `Product_Name` | Name of the product sold |
+| `Sales` | Revenue from the order |
+| `Quantity` | Number of units ordered |
+| `Discount` | Discount applied (0%–30%) |
+| `Profit` | Profit from the order |
+| `Customer_Name` | Name of the customer |
+| `Segment` | Customer segment |
+| `Order_Month` | Abbreviated month of the order |
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-![Excel](https://img.shields.io/badge/Excel-Pivot_Tables-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-Charts_%26_Graphs-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-Slicers_%26_Filters-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-Conditional_Formatting-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
-
-- **Microsoft Excel** — Pivot Tables, Pivot Charts, Slicers, Conditional Formatting
-- **Data Visualisation** — Pie, Line, Bar, Radar, and Donut charts
-- **Dynamic Filtering** — Multi-slicer interactivity for real-time data exploration
+- **Microsoft Excel** — Pivot Tables, Pivot Charts, Slicers, Timeline Filters
+- **Chart Types Used** — Pie, Line, Bar, Radar, Donut
+- **Data Size** — 2,000 orders · 240 unique customers · 14 fields
 
 ---
 
 ## 🚀 How to Use
 
-1. **Open** `RenseeGajipara_Excel_Dashboard.xlsx` in Microsoft Excel (2016 or later recommended)
-2. **Enable macros** if prompted to ensure full interactivity
-3. **Use the slicers** (Month, Segment, Category, Region) to filter all charts simultaneously
-4. **Hover over charts** for detailed data tooltips
-5. **Reset filters** by clicking the clear filter icon on any slicer
+1. **Download** the `RenseeGajipara_Excel_Dashboard.xlsx` file.
+2. **Open** it in Microsoft Excel (2016 or later recommended).
+3. Navigate to the **Dashboard** sheet.
+4. Use the **slicers** (Segment, Category, Region) and the **date timeline** to filter data interactively.
+5. All charts and KPI cards will update automatically.
 
 ---
 
-## 📷 Dashboard Preview
+## 👤 Author
 
-![Customer Transaction Analysis Dashboard](Dashboard.png)
-
----
-
-## 👩‍💻 Author
-
-**Rensee Gajipara**
-
-![Author](https://img.shields.io/badge/Author-Rensee_Gajipara-purple?style=for-the-badge&logo=person&logoColor=white)
-![Excel](https://img.shields.io/badge/Skill-Data_Analysis-blueviolet?style=for-the-badge&logo=databricks&logoColor=white)
-![Dashboard](https://img.shields.io/badge/Skill-Dashboard_Design-ff69b4?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+[![Author](https://img.shields.io/badge/Made%20by-Rensee%20Gajipara-blueviolet?style=flat-square&logo=github)](https://github.com/)
+[![Excel](https://img.shields.io/badge/Tool-Microsoft%20Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white)](https://www.microsoft.com/excel)
 
 ---
 
-## 📜 License
+## 📄 License
 
 This project is created for educational and portfolio purposes.
 
-![License](https://img.shields.io/badge/License-Personal_Portfolio-lightgrey?style=flat-square)
-
 ---
 
-<p align="center">Made with ❤️ by <strong>Rensee Gajipara</strong></p>
+*Built with ❤️ using Microsoft Excel*
